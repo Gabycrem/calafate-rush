@@ -8,9 +8,7 @@ namespace Player
         private Dictionary<KeyCode, Vector3> _movementMap;
         [SerializeField] private Rigidbody _rigidbody = null;
         [SerializeField] private float _speed = 10;
-        [SerializeField] private float _jumpForce;
-
-
+        [SerializeField] private float _jumpForce = 200;
 
         void Start()
         {
@@ -54,7 +52,6 @@ namespace Player
             movementDirection = movementDirection.normalized * _speed;
             movementDirection += new Vector3(0, _rigidbody.velocity.y, 0);
             _rigidbody.velocity = movementDirection;
-
 
         }
 
