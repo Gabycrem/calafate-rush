@@ -8,9 +8,11 @@ namespace Player
         private Dictionary<KeyCode, Vector3> _movementMap;
         [SerializeField] private Rigidbody _rigidbody = null;
         [SerializeField] private float _speed = 10;
-        [SerializeField] private float _jumpForce = 200;
+        //[SerializeField] private float _jumpForce = 200;
+         [SerializeField] private float _floorDetection;
+         [SerializeField] private float _force = 0f;
 
-        void Start()
+        /*void Start()
         {
             _movementMap = new Dictionary<KeyCode, Vector3>
             {
@@ -28,25 +30,49 @@ namespace Player
 
             };
 
-        }
+        }*/
 
         // Update is called once per frame
         void Update()
         {
             var movementDirection = Vector3.zero;
 
-            foreach (var key in _movementMap.Keys)
+            /*foreach (var key in _movementMap.Keys)
             {
 
                 if (Input.GetKey(key))
                 {
                     movementDirection += _movementMap[key];
                 }
+            }*/
+            if(Input.GetKey(KeyCode.W))
+            {
+                movementDirection += transform.forward;
+            }
+            
+            if(Input.GetKey(KeyCode.D))
+            {
+                movementDirection += transform.right;
             }
 
+            if(Input.GetKey(KeyCode.A))
+            {
+                movementDirection -= transform.right;
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                movementDirection -= transform.forward;
+            }
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                _rigidbody.AddForce(Vector3.up * _jumpForce);
+                var hasCollision = Physics.Raycast(transform.position, Vector3.down, _floorDetection);
+               // _rigidbody.AddForce(Vector3.up * _jumpForce);
+               if(hasCollision)
+               {
+                _rigidbody.AddForce(Vector3.up * _force);
+               }
+
             }
 
             movementDirection = movementDirection.normalized * _speed;
