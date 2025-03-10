@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Calafate Rush.sln"
+    "dotnet.defaultSolution": "calafate-rush.sln"
 }
