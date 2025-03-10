@@ -15,6 +15,7 @@ namespace Assembly_CSharp.Assets.Code.Camera
     void Start()
     {
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
