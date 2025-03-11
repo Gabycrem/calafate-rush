@@ -8,37 +8,38 @@ public class AudioManager : MonoBehaviour
 {
     public AudioMixer audioMixer;
     [Header("OptionsMenu")]
-    public Slider SliderSFXVolume; 
-    public Slider SliderMasterVolume; 
+    public Slider SliderSFXVolume;
+    public Slider SliderMasterVolume;
     public Toggle ToggleMute;
-    private float LastVolume;
+    private float lastVolume = 0;
+
+    private float _savedVolume = 0;
 
     private void Awake()
     {
         SliderSFXVolume.onValueChanged.AddListener(SetSFXVolume);
         SliderMasterVolume.onValueChanged.AddListener(SetMasterVolume);
-        ToggleMute.onValueChanged.AddListener(delegate { SetMute(); });
+        ToggleMute.onValueChanged.AddListener(SetMute);
     }
 
-    public void SetMute()
+    public void SetMute(bool isMuted)
     {
-        if(ToggleMute.isOn)
+        if (isMuted)
         {
-            audioMixer.GetFloat("MasterVolume", out LastVolume);
-            PlayerPrefs.SetFloat("SavedVolume", LastVolume);
-            PlayerPrefs.Save();
+            audioMixer.GetFloat("MasterVolume", out lastVolume);
+            Debug.LogError(lastVolume);
+            _savedVolume = lastVolume;
             audioMixer.SetFloat("MasterVolume", -80);
         }
         else
         {
-        float savedVolume = PlayerPrefs.GetFloat("SavedVolume", 0f);
-        audioMixer.SetFloat("MasterVolume", savedVolume);
+            audioMixer.SetFloat("MasterVolume", _savedVolume);
         }
     }
 
     public void SetMasterVolume(float volume)
     {
-        audioMixer.SetFloat("MasterVolume", Mathf.Log10(volume) * 20); 
+        audioMixer.SetFloat("MasterVolume", Mathf.Log10(volume) * 20);
     }
 
     public void SetSFXVolume(float volume)
