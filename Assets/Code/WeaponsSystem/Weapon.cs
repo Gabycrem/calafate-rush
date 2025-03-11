@@ -1,9 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using Assembly_CSharp.Assets.Code.WeaponsSystem.Proyectiles;
 using UnityEngine;
 
-namespace WeaponsSistem
+namespace WeaponsSystem
 {
 
 
@@ -13,13 +12,6 @@ namespace WeaponsSistem
       [SerializeField] private Transform _spawnPosition; 
       [SerializeField] private float _force = 10;
 
-       // Start is called before the first frame update
-       void Start()
-       {
-        
-       }
- 
-       // Update is called once per frame
        void Update()
        {
         if(Input.GetMouseButtonDown(0))
@@ -34,4 +26,4 @@ namespace WeaponsSistem
        }
     }
 }
-// en weapon estoy referenciando el c# del proyectil  ( estoy referenciando al script, no algameobject )y este contiene el rigidbody 
+// en weapon estoy referenciando el c# del proyectil  ( estoy referenciando al script, no al gameobject )y este contiene el rigidbody 
