@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     [Header("OptionsMenu")]
     public Slider SliderSFXVolume;
     public Slider SliderMasterVolume;
+    public Slider SliderMusicVolume;
     public Toggle ToggleMute;
     private float lastVolume = 0;
 
@@ -19,6 +20,7 @@ public class AudioManager : MonoBehaviour
     {
         SliderSFXVolume.onValueChanged.AddListener(SetSFXVolume);
         SliderMasterVolume.onValueChanged.AddListener(SetMasterVolume);
+        SliderMusicVolume.onValueChanged.AddListener(SetMusicVolume);
         ToggleMute.onValueChanged.AddListener(SetMute);
     }
 
@@ -45,6 +47,11 @@ public class AudioManager : MonoBehaviour
     public void SetSFXVolume(float volume)
     {
         audioMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        audioMixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
     }
 
 

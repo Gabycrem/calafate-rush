@@ -8,10 +8,6 @@ namespace Player
         private Dictionary<KeyCode, Vector3> _movementMap;
         [SerializeField] private Rigidbody _rigidbody = null;
         [SerializeField] private float _speed = 10;
-<<<<<<< HEAD
-        //[SerializeField] private float _jumpForce = 200;
-=======
->>>>>>> e85931369f8e114d1323b23a5e808e3f290edc4f
         [SerializeField] private float _floorDetection;
         [SerializeField] private float _force = 0f;
 
