@@ -9,8 +9,8 @@ namespace Player
         [SerializeField] private Rigidbody _rigidbody = null;
         [SerializeField] private float _speed = 10;
         //[SerializeField] private float _jumpForce = 200;
-         [SerializeField] private float _floorDetection;
-         [SerializeField] private float _force = 0f;
+        [SerializeField] private float _floorDetection;
+        [SerializeField] private float _force = 0f;
 
         /*void Start()
         {
