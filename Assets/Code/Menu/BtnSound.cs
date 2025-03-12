@@ -4,22 +4,17 @@ using UnityEngine;
 
 public class BtnSound : MonoBehaviour
 {
-    private AudioSource sound;
-    public AudioClip BtnClick;
-    public AudioClip BtnSwitch;
-    void Start()
-    {
-        sound = GetComponent<AudioSource>();
-    }
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _audioClick;
+    [SerializeField] private AudioClip _audioSwitch;
 
-    // Update is called once per frame
     public void ClickAudioOn()
     {
-        sound.PlayOneShot(BtnClick);
+        _audioSource.PlayOneShot(_audioClick);
     }
 
     public void SwitchAudioOn()
     {
-        sound.PlayOneShot(BtnSwitch);
+        _audioSource.PlayOneShot(_audioSwitch);
     }
 }
