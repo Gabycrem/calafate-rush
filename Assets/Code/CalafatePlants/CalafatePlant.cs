@@ -1,24 +1,24 @@
 
 using System.Collections;
 using System.Numerics;
+using Assembly_CSharp.Assets.Code.WeaponsSystem.Proyectiles;
 using UnityEngine;
 
 namespace Calafate
 {
     public class CalafatePlant : MonoBehaviour
     {
-        public GameObject PlantWithFruits;
-        public GameObject PlantWithoutFruits;
+        [SerializeField] private GameObject _plantWithFruits;
+        [SerializeField] private GameObject _plantWithoutFruits;
         [SerializeField] private float _regenerationTime = 5f;
 
 
         // Recibe disparo. Oculta frutos en la planta. 
         // Próx: hacer aparecer frutos caidos. si el player esta a una cierta distancia 
-        void OnCollisionEnter(Collision collision)
+        void OnTriggerEnter(Collider collision)
         {
-            if (collision.gameObject.CompareTag("Projectile"))
+            if (collision.gameObject.TryGetComponent<Proyectile>(out _))
             {
-
                 // Ocultar la planta con frutos y mostrar la sin frutos
                 ChangePlantState(false);
                 Debug.Log("le pego");
@@ -45,8 +45,8 @@ namespace Calafate
         // Función para cambiar el estado de la planta
         void ChangePlantState(bool hasFruits)
         {
-            PlantWithFruits.SetActive(hasFruits);
-            PlantWithoutFruits.SetActive(!hasFruits);
+            _plantWithFruits.SetActive(hasFruits);
+            _plantWithoutFruits.SetActive(!hasFruits);
         }
 
         //Función para soltar los frutos
