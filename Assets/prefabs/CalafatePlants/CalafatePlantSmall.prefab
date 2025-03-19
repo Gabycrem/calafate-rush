@@ -119,6 +119,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fruitPrefab: {fileID: 607551334540084564, guid: 41695df8ece8b7944ad3c88bfea0b20e, type: 3}
   _amountOfFruitsSpawn: 7
+  _jumpForce: 3
+  _horizontalForce: 1
+  _forwardForce: 1
+  _timeToDeleteFruits: 4
+  Fruits: []
 --- !u!1001 &1342169379280724013
 PrefabInstance:
   m_ObjectHideFlags: 0
