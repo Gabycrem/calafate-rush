@@ -1,6 +1,5 @@
 
 using System.Collections;
-using System.Numerics;
 using Assembly_CSharp.Assets.Code.WeaponsSystem.Proyectiles;
 using UnityEngine;
 
@@ -14,18 +13,25 @@ namespace Calafate
 
 
         // Recibe disparo. Oculta frutos en la planta. 
-        // Próx: hacer aparecer frutos caidos. si el player esta a una cierta distancia 
+        // Ya aparecen los frutos caidos.
         void OnTriggerEnter(Collider collision)
         {
             if (collision.gameObject.TryGetComponent<Proyectile>(out _))
             {
+                //Soltar los frutos
+                if (_plantWithFruits.activeSelf) //Verifico que la planta activa es la que tiene frutos.
+                {
+                    FruitSpawner spawner = GetComponentInChildren<FruitSpawner>(); // Obtiene el Spawner en esta planta
+                    if (spawner != null)
+                    {
+                        Debug.Log("activa Spawner");
+                        spawner.SpawnFruits();  // Activa el Spawner de esta planta
+                    }
+                }
+                
                 // Ocultar la planta con frutos y mostrar la sin frutos
                 ChangePlantState(false);
                 Debug.Log("le pego");
-
-                //Soltar los frutos
-
-                //DropFruits();
 
                 // Destruir el proyectil
                 Destroy(collision.gameObject);
@@ -48,13 +54,7 @@ namespace Calafate
             _plantWithFruits.SetActive(hasFruits);
             _plantWithoutFruits.SetActive(!hasFruits);
         }
-
-        //Función para soltar los frutos
-        /*
-        void DropFruits()
-        {
-            
-        }
-        */
     }
 }
+
+
