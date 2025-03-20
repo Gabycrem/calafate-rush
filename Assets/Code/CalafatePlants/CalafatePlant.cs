@@ -1,6 +1,9 @@
 
 using System.Collections;
-using Assembly_CSharp.Assets.Code.WeaponsSystem.Proyectiles;
+
+using System.Numerics;
+using Assembly_CSharp.Assets.Code.WeaponsSystem.Projectiles;
+
 using UnityEngine;
 
 namespace Calafate
@@ -16,7 +19,7 @@ namespace Calafate
         // Ya aparecen los frutos caidos.
         void OnTriggerEnter(Collider collision)
         {
-            if (collision.gameObject.TryGetComponent<Proyectile>(out _))
+            if (collision.gameObject.TryGetComponent<Projectile>(out _))
             {
                 //Soltar los frutos
                 if (_plantWithFruits.activeSelf) //Verifico que la planta activa es la que tiene frutos.
