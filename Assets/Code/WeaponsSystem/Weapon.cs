@@ -1,5 +1,5 @@
 
-using Assembly_CSharp.Assets.Code.WeaponsSystem.Proyectiles;
+using Assembly_CSharp.Assets.Code.WeaponsSystem.Projectiles;
 using UnityEngine;
 
 namespace WeaponsSystem
@@ -8,22 +8,30 @@ namespace WeaponsSystem
 
     public class Weapon : MonoBehaviour
     {
-      [SerializeField] private Proyectile  _proyectile;
+      
       [SerializeField] private Transform _spawnPosition; 
       [SerializeField] private float _force = 10;
+      [SerializeField] private float _damage = 1;
 
        void Update()
-       {
-        if(Input.GetMouseButtonDown(0))
         {
-          /*Debug.Log("Instantiate proyectile"); //instanciar el proyectil (generar copia)
-          Instantiate(_proyectile, _spawnPosition.position, Quaternion.identity);*/
-
-          //
-          var proyectileInstance = Instantiate(_proyectile, _spawnPosition.position, Quaternion.identity);
-          proyectileInstance.Shoot(_force, transform.forward);
+           if(!Input.GetMouseButtonDown(0)) return;
+           Shoot();
         }
+          
+  
+       private void Shoot()
+       {
+            var projectile = ProjectilePool.Instance.Get();
+            if (projectile == null) 
+            {
+               Debug.LogWarning("el pool no devolvio un proyectil valido");
+               return; 
+            }
+            projectile.transform.position = _spawnPosition.position;
+            projectile.gameObject.SetActive(true);
+            projectile.Shoot(_force, transform.forward, _damage);
+
        }
     }
 }
-// en weapon estoy referenciando el c# del proyectil  ( estoy referenciando al script, no al gameobject )y este contiene el rigidbody 

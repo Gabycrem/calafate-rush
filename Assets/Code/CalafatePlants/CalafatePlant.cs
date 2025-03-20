@@ -1,7 +1,7 @@
 
 using System.Collections;
 using System.Numerics;
-using Assembly_CSharp.Assets.Code.WeaponsSystem.Proyectiles;
+using Assembly_CSharp.Assets.Code.WeaponsSystem.Projectiles;
 using UnityEngine;
 
 namespace Calafate
@@ -17,7 +17,7 @@ namespace Calafate
         // Próx: hacer aparecer frutos caidos. si el player esta a una cierta distancia 
         void OnTriggerEnter(Collider collision)
         {
-            if (collision.gameObject.TryGetComponent<Proyectile>(out _))
+            if (collision.gameObject.TryGetComponent<Projectile>(out _))
             {
                 // Ocultar la planta con frutos y mostrar la sin frutos
                 ChangePlantState(false);
