@@ -7,10 +7,8 @@ namespace Calafate
     public class CalafatePlantsPool : MonoBehaviour
     {
         [SerializeField] private CalafatePlant _calafatePlant;
-        [SerializeField] private int _poolSize = 20;
-        [SerializeField] private float _spwanInterval = 5f;
-        [SerializeField] private float _timeToLive = 15f;
-        private float _spawnTimer = 0f;
+        [SerializeField] private int _poolSize = 10;
+
         private Queue<CalafatePlant> _calafatePool = new();
         void Start()
         {
@@ -22,17 +20,20 @@ namespace Calafate
             }
         }
 
-        void Update()
+        public CalafatePlant GetCalafatePlant()
         {
-            _spawnTimer += Time.deltaTime; //tiempo real transcurrido
-            if (_spawnTimer >= _spwanInterval)
-            {
-                _spawnTimer = 0f;
-                
+            Debug.Log("GET calafate");
+            if(_calafatePool.Count > 0){
+                return _calafatePool.Dequeue();
+            } else{
+                return null;
             }
+            
         }
 
-
+        public void ReturnCalafatePlant(CalafatePlant calafatePlant){
+            _calafatePool.Enqueue(calafatePlant);
+        }
     }
 }
 
