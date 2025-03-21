@@ -1,10 +1,7 @@
-
 using System.Collections;
-
-using System.Numerics;
 using Assembly_CSharp.Assets.Code.WeaponsSystem.Projectiles;
-
 using UnityEngine;
+using WeaponsSystem;
 
 namespace Calafate
 {
@@ -17,9 +14,10 @@ namespace Calafate
 
         // Recibe disparo. Oculta frutos en la planta. 
         // Ya aparecen los frutos caidos.
-        void OnTriggerEnter(Collider collision)
+        private void OnTriggerEnter(Collider other)
         {
-            if (collision.gameObject.TryGetComponent<Projectile>(out _))
+            Debug.Log("OnCollisionEnter");
+            if (other.gameObject.TryGetComponent<Projectile>(out var projectile))
             {
                 //Soltar los frutos
                 if (_plantWithFruits.activeSelf) //Verifico que la planta activa es la que tiene frutos.
@@ -31,13 +29,13 @@ namespace Calafate
                         spawner.SpawnFruits();  // Activa el Spawner de esta planta
                     }
                 }
-                
+
                 // Ocultar la planta con frutos y mostrar la sin frutos
                 ChangePlantState(false);
                 Debug.Log("le pego");
 
-                // Destruir el proyectil
-                Destroy(collision.gameObject);
+                // Devolver el proyectil al pool
+                ProjectilePool.Instance.Return(projectile);
 
                 //Iniciar regeneración de frutos
                 StartCoroutine(RegenerateFruits());
