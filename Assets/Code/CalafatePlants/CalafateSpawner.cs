@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using TerrainM;
 using UnityEngine;
 
 
@@ -10,9 +10,16 @@ namespace Calafate
         [SerializeField] private float _spwanInterval = 5f;
         [SerializeField] private float _timeToLive = 15f;
         private float _spawnTimer = 0f;
-
         [SerializeField] private CalafatePlantsPool _calafatePlantsPool;
+        private TerrainManager _terrainManager;
 
+        private void Start()
+        {
+            _terrainManager = FindObjectOfType<TerrainManager>();
+            if (_terrainManager == null){
+                Debug.LogError("No se encontró TerrainManager en la escena.");
+            }
+        }
         private void Update()
         {
             Debug.Log("Inicio Update");
@@ -27,14 +34,21 @@ namespace Calafate
         private void SpawnCalafate()
         {
             Debug.Log("Inicio SpawnCalafate");
+            //Controlando que exista Terrain
+            if (_terrainManager == null){
+                Debug.LogError("TerrainManager no está inicializado.");
+                return;
+            }
+
+            //Busco posición
+            Vector3 spawnPosition = _terrainManager.GetTerrainArea();
+
             // Traer una planta del Queue pool
             CalafatePlant calafatePlant = _calafatePlantsPool.GetCalafatePlant();
 
             if (calafatePlant != null)
             {
-                float randomX = Random.Range(-10f, 10f);
-                float randomY = Random.Range(0f, 5f);
-                calafatePlant.transform.position = new Vector3(randomX, randomY, -20f);
+                calafatePlant.transform.position = spawnPosition;
 
                 // Activo la planta
                 calafatePlant.gameObject.SetActive(true);

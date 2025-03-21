@@ -4689,6 +4689,17 @@ Transform:
   - {fileID: 76279292}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &612903333 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4818990453211179860, guid: bc2eca99bd9ce7b4fbdd6712106619f7, type: 3}
+  m_PrefabInstance: {fileID: 3193604464013232257}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad81102c58a6154fbcf1997e514e005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &617558200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13034,63 +13045,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3490930834329334354, guid: 08bdb42a7413db34e867890b29e20ecd, type: 3}
   m_PrefabInstance: {fileID: 1699927513}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1703127545
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3942340599311136191, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_Name
-      value: CalafatePlantSmall
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.352089
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.00000011920929
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -41.12963
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
 --- !u!1001 &1705980831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15176,63 +15130,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &1947749438
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3942340599311136191, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_Name
-      value: CalafatePlantSmall (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.454223
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.26134288
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.2822177
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8375485880310564311, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
 --- !u!1001 &1956778645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16949,6 +16846,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f01337c4b1a6e774cb6a6f4c3dd02910, type: 3}
+--- !u!1001 &3193604464013232257
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3549069642089560775, guid: bc2eca99bd9ce7b4fbdd6712106619f7, type: 3}
+      propertyPath: _calafatePlantsPool
+      value: 
+      objectReference: {fileID: 612903333}
+    - target: {fileID: 5717664648714140819, guid: bc2eca99bd9ce7b4fbdd6712106619f7, type: 3}
+      propertyPath: m_Name
+      value: CalafatePlants
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658894788583363882, guid: bc2eca99bd9ce7b4fbdd6712106619f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.123218
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658894788583363882, guid: bc2eca99bd9ce7b4fbdd6712106619f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.0082552
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658894788583363882, guid: bc2eca99bd9ce7b4fbdd6712106619f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -29.28687
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658894788583363882, guid: bc2eca99bd9ce7b4fbdd6712106619f7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658894788583363882, guid: bc2eca99bd9ce7b4fbdd6712106619f7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658894788583363882, guid: bc2eca99bd9ce7b4fbdd6712106619f7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658894788583363882, guid: bc2eca99bd9ce7b4fbdd6712106619f7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658894788583363882, guid: bc2eca99bd9ce7b4fbdd6712106619f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658894788583363882, guid: bc2eca99bd9ce7b4fbdd6712106619f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8658894788583363882, guid: bc2eca99bd9ce7b4fbdd6712106619f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bc2eca99bd9ce7b4fbdd6712106619f7, type: 3}
 --- !u!1001 &4674286093509825516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17017,64 +16975,6 @@ PrefabInstance:
       addedObject: {fileID: 1767405281749224848}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27e25e3bc7ba5f640aea250f9a3842bd, type: 3}
---- !u!1001 &7411294595527366449
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3037188213476101948, guid: 5fb68d5fbba3b1541a9fe43ff0656e7b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.123218
-      objectReference: {fileID: 0}
-    - target: {fileID: 3037188213476101948, guid: 5fb68d5fbba3b1541a9fe43ff0656e7b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.0082552
-      objectReference: {fileID: 0}
-    - target: {fileID: 3037188213476101948, guid: 5fb68d5fbba3b1541a9fe43ff0656e7b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -29.28687
-      objectReference: {fileID: 0}
-    - target: {fileID: 3037188213476101948, guid: 5fb68d5fbba3b1541a9fe43ff0656e7b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3037188213476101948, guid: 5fb68d5fbba3b1541a9fe43ff0656e7b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3037188213476101948, guid: 5fb68d5fbba3b1541a9fe43ff0656e7b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3037188213476101948, guid: 5fb68d5fbba3b1541a9fe43ff0656e7b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3037188213476101948, guid: 5fb68d5fbba3b1541a9fe43ff0656e7b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3037188213476101948, guid: 5fb68d5fbba3b1541a9fe43ff0656e7b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3037188213476101948, guid: 5fb68d5fbba3b1541a9fe43ff0656e7b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5072617313512085365, guid: 5fb68d5fbba3b1541a9fe43ff0656e7b, type: 3}
-      propertyPath: m_Name
-      value: CalafatePlants
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 5330987722516408324, guid: 5fb68d5fbba3b1541a9fe43ff0656e7b, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5fb68d5fbba3b1541a9fe43ff0656e7b, type: 3}
 --- !u!1001 &8730119247996590798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17153,9 +17053,7 @@ SceneRoots:
   - {fileID: 597657717}
   - {fileID: 1119575402}
   - {fileID: 534607093}
-  - {fileID: 7411294595527366449}
   - {fileID: 1054434829}
   - {fileID: 1796300643}
   - {fileID: 900533083}
-  - {fileID: 1703127545}
-  - {fileID: 1947749438}
+  - {fileID: 3193604464013232257}
