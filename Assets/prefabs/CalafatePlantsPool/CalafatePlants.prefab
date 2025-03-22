@@ -77,8 +77,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7e9fd7407849bb48bcf6c20bfb73a79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spwanInterval: 5
-  _timeToLive: 15
+  _spwanInterval: 3
+  _timeToLive: 33
+  _calafatePlantsPool: {fileID: 0}
 --- !u!1 &8281001066752385778
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,4 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _calafatePlant: {fileID: 4555662706930632413, guid: e3f89c8f1e2e2474fa6a9d02a87fd7bf, type: 3}
-  _poolSize: 20
+  _poolSize: 10

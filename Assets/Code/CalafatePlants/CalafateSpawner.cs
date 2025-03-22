@@ -8,7 +8,7 @@ namespace Calafate
     public class CalafateSpawner : MonoBehaviour
     {
         [SerializeField] private float _spwanInterval = 5f;
-        [SerializeField] private float _timeToLive = 15f;
+        [SerializeField] private float _timeToLive = 5f;
         private float _spawnTimer = 0f;
         [SerializeField] private CalafatePlantsPool _calafatePlantsPool;
         private TerrainManager _terrainManager;

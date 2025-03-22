@@ -32,7 +32,9 @@ namespace Calafate
         }
 
         public void ReturnCalafatePlant(CalafatePlant calafatePlant){
+            calafatePlant.gameObject.SetActive(false);
             _calafatePool.Enqueue(calafatePlant);
+
         }
     }
 }
