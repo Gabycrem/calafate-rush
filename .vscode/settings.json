@@ -51,7 +51,7 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "calafate-rush.sln",
+    "dotnet.defaultSolution": "Calafate Rush.sln",
     "cSpell.words": [
         "Behaviour",
         "Mathf",
