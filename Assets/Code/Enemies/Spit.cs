@@ -6,7 +6,7 @@ using UnityEngine;
 
 
 
-public class tospit : MonoBehaviour
+public class Spit : MonoBehaviour
 {
 
     public Transform hocico;
@@ -53,7 +53,7 @@ public class tospit : MonoBehaviour
         }
     }
 
-    void FireLaser(Collider target, bool activate)
+     public void FireLaser(Collider target, bool activate)
     {
         if (activate)
         {
