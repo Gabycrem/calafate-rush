@@ -55,7 +55,13 @@ namespace Calafate
             _plantWithFruits.SetActive(hasFruits);
             _plantWithoutFruits.SetActive(!hasFruits);
         }
+
+        //Función para soltar los frutos
+        /*
+        void DropFruits()
+        {
+            
+        }
+        */
     }
 }
-
-
