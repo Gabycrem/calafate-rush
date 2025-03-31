@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
 
-    public void Startgame(string game)
+    public void StartScene(string scene)
     {
-        SceneManager.LoadScene(game);
+        SceneManager.LoadScene(scene);
     }
 
     public void Exit()
     {
         Application.Quit();
-        /* Debug.Log("Se cerro el juego");*/
     }
+
 
 }
