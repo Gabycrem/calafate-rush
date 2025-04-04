@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2007982431366129863}
   - component: {fileID: 4616201125766478971}
   - component: {fileID: 6712815041322828029}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Projectile
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -139,7 +139,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0

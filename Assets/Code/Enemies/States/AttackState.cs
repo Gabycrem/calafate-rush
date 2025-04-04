@@ -7,6 +7,7 @@ using UnityEngine;
 public class AttackState : State
 {
     public override void EnterState(EnemyController controller)
+
     {
             Spit spitComponent = controller.GetComponent<Spit>();
 
@@ -16,16 +17,43 @@ public class AttackState : State
           GameObject player = GameObject.FindWithTag("Player");
 
          if (player != null)
-        {
-            Collider playerCollider = player.GetComponent<Collider>();
 
-             if (playerCollider != null)
              {
+                // Primero rota hacia el jugador
+                 controller.RotateTowardsPlayer();
                 // Activa el láser
-                  spitComponent.FireLaser(playerCollider, true);
-                controller.transform.LookAt(player.transform.position);
+                  spitComponent.FireLaser(true);
+                
              }
         }
      }
+
+
+    
+    
+
+    public override void UpdateState(EnemyController controller)
+    {
+    // Perseguir al jugador si está en rango
+    controller.ChasePlayer();
+
+    // Mantener la rotación hacia el jugador
+    controller.RotateTowardsPlayer();
     }
 }
+
+       /* public override void UpdateState(EnemyController controller)
+        {
+             GameObject player = GameObject.FindWithTag("Player");
+
+                 if (player != null)
+                 {
+                            // Actualiza la rotación para mirar al jugador
+                           Vector3 direction = (player.transform.position - controller.transform.position).normalized;
+                            controller.transform.rotation = Quaternion.LookRotation(direction);
+                 }
+        }*/
+
+
+
+
