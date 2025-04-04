@@ -7,7 +7,7 @@ namespace Enemies.Triggers
     public class PlayerDetector : MonoBehaviour
     {
         [SerializeField ] private EnemyController _enemyController;
-
+       
      
         private void OnTriggerEnter(Collider other)
         {
@@ -18,7 +18,7 @@ namespace Enemies.Triggers
         }
 
         private void OnTriggerExit(Collider other)
-       
+        
         {
             if(other.CompareTag("Player"))
 
