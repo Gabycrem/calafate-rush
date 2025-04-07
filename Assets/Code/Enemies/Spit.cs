@@ -7,9 +7,11 @@ public class Spit : MonoBehaviour
 {
     public Transform hocico;
     public LineRenderer lineRenderer;
-    public float laserDuration = 0.5f;
-
+    public float laserDuration = 0.3f;
+   
     private Transform currentTarget; // Para almacenar la referencia al jugador
+    [SerializeField] private float _damage = 1;
+    private bool isFiringLaser = false; // Indica si el láser está activo
 
     private void Start()
     {
@@ -22,6 +24,8 @@ public class Spit : MonoBehaviour
         {
             currentTarget = other.transform; // Guardamos la referencia al jugador
             FireLaser(true);
+            StartCoroutine(DealDamageOverTime(other.GetComponent<PlayerHealth>()));// Empieza a causar daño
+            Debug.Log("le esta hacinedo daño");
         }
     }
 
@@ -31,6 +35,7 @@ public class Spit : MonoBehaviour
         {
             FireLaser(false);
             currentTarget = null; // Eliminamos la referencia al jugador
+            isFiringLaser = false; // Detenemos el daño
         }
     }
 
@@ -53,6 +58,17 @@ public class Spit : MonoBehaviour
             // Configuramos las posiciones inicial y final del láser
             lineRenderer.SetPosition(0, hocico.position);
             lineRenderer.SetPosition(1, currentTarget.position);
+            isFiringLaser = true; // Indicamos que el láser está disparando
         }
     }
+
+     private IEnumerator DealDamageOverTime(PlayerHealth playerHealth)
+    {
+        while (isFiringLaser && playerHealth != null)
+        {
+            playerHealth.TakeDamage(_damage); // Causa daño al jugador
+            yield return new WaitForSeconds(laserDuration); // Espera antes de volver a causar daño
+        }
+    }
+
 }

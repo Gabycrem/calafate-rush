@@ -13,6 +13,7 @@ namespace Enemies.Triggers
         {
             if(other.CompareTag("Player"))
             {
+                
                 _enemyController.DetectPlayer(other.transform);
             }
         }
